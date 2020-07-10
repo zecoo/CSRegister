@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>信息查询</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body>
+  <div class="container" id="app-5">
+    <!--nav-->
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="form.html">报名</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="info.html">查询</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">研会介绍</a>
+      </li>
+    </ul>
+    <div class="search-info">
+      <h1>信息查询</h1>
+      <div class="input-group mb-3 col-sm">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">学号</span>
+        </div>
+        <input type="text" class="form-control" aria-describedby="basic-addon1" v-model="stu_id">
+      </div>
+      <div class="submit">
+        <button class="btn btn-primary" type="submit" v-on:click="getSql">查询</button>
+      </div>
+      <div class="info">
+        <p>{{ info.name }}</p>
+        <p>{{ info.id }}</p>
+        <p>{{ info.home }}</p>
+        <p>{{ info.school }}</p>
+        <p>{{ info.department }}</p>
+        <p>{{ info.major }}</p>
+        <p>{{ info.experience }}</p>
+        <p>{{ info.rewards }}</p>
+        <p>{{ info.wishes }}</p>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</html>

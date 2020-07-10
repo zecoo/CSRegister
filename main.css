@@ -1,0 +1,31 @@
+.container {
+  margin: 2rem auto;
+}
+
+.nav {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.submit {
+  text-align:center
+}
+
+.btn {
+  margin: 2rem auto;
+  justify-content: center;
+}
+
+.textarea {
+  margin-top: 1rem;
+}
+
+.search-info {
+  max-width: 720px;
+  margin: 0 auto;
+}

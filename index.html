@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>研究生会报名表</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body>
+	<div class="container">
+		<!--nav-->
+		<ul class="nav">
+			<li class="nav-item">
+				<a class="nav-link active" href="form.html">报名</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="info.html">查询</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">研会介绍</a>
+			</li>
+		</ul>
+		<h1>研究生会报名表</h1>
+
+		<form action="http://127.0.0.1:5000/register" method="post">
+			<div class="row">
+				<!--name-->
+				<div class="input-group mb-3 col-sm">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">姓名</span>
+					</div>
+					<input type="text" class="form-control" aria-describedby="basic-addon1" name="stu_name">
+				</div>
+				<!--number-->
+				<div class="input-group mb-3 col-sm">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">学号</span>
+					</div>
+					<input type="text" class="form-control" aria-describedby="basic-addon1" name="stu_id">
+				</div>
+			</div>
+	
+			<div class="row">
+				<!--name-->
+				<div class="input-group mb-3 col-sm">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">籍贯</span>
+					</div>
+					<input type="text" class="form-control" aria-describedby="basic-addon1" name="home">
+				</div>
+				<!--number-->
+				<div class="input-group mb-3 col-sm">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">专业</span>
+					</div>
+					<input type="text" class="form-control" aria-describedby="basic-addon1" name="major">
+				</div>
+			</div>
+		
+			<div class="row">
+				<!--email-->
+				<div class="input-group mb-3 col-sm">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">邮箱</span>
+					</div>
+					<input type="text" class="form-control" aria-describedby="basic-addon1" name="email">
+				</div>
+				<!--school-->
+				<div class="input-group mb-3 col-sm">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">本科学校</span>
+					</div>
+					<input type="text" class="form-control" aria-describedby="basic-addon1" name="school">
+				</div>
+			</div>
+		
+			<div>
+				<!--team-->
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<label class="input-group-text" for="inputGroupSelect01">部门</label>
+					</div>
+					<select class="custom-select" name="department">
+						<option>选择部门…</option>
+						<option value="学术部">学术部</option>
+						<option value="体育部">体育部</option>
+						<option value="心理&权益部">心理&权益部</option>
+						<option value="文艺部">文艺部</option>
+						<option value="宣传部">宣传部</option>
+					</select>
+				</div>
+			</div>
+		
+			<!--self-intro-->
+			<div class="input-group textarea">
+				<div class="input-group-prepend">
+					<span class="input-group-text">学校经历</span>
+				</div>
+				<textarea class="form-control" aria-label="With textarea" placeholder="写写学生工作或社团经历等" name="experience"></textarea>
+			</div>
+			<!--self-intro-->
+			<div class="input-group textarea">
+				<div class="input-group-prepend">
+					<span class="input-group-text">奖惩情况</span>
+				</div>
+				<textarea class="form-control" aria-label="With textarea" name="rewards"></textarea>
+			</div>
+			<!--self-intro-->
+			<div class="input-group textarea">
+				<div class="input-group-prepend">
+					<span class="input-group-text">部门展望</span>
+				</div>
+				<textarea class="form-control" aria-label="With textarea" placeholder="写写对部门的认识和期待等" name="wishes"></textarea>
+			</div>
+			<div class="submit align-self-center" id="app-5">
+				<button class="btn btn-primary" type="submit">提交</button>
+			</div>
+		</form>
+
+	</div>
+	
+	<script type="text/javascript" src="vue.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
